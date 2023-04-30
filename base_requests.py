@@ -9,7 +9,7 @@ async def get_response(url):
 
 async def post_response(url, data):
     async with aiohttp.ClientSession() as session:
-        async with session.post(url, data=data) as resp:
+        async with session.post(url, json=data) as resp:
             return await resp.json()
 
 
